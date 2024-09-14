@@ -11,7 +11,7 @@ public class Main {
         ships[1] = cruiseShip;
         ships[2] = cargoShip;
 
-        // Loop through the array and call print() method (polymorphism in action)
+        // Loop through the array and call print() method
         for (Ship ship : ships) {
             ship.print();
         }
