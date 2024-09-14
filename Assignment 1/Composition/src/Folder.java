@@ -27,18 +27,18 @@ public class Folder {
         subFolders.add(folder);
     }
 
-    // Print the contents of the folder with indentation
+    // Print the contents of the folder
     public void print(String indent) {
         System.out.println(indent + "Folder: " + folderName);
 
-        // Print all files with additional indentation
+        
         for (File file : files) {
-            file.print(indent + "  ");  // Increase indentation for files
+            file.print(indent + "  ");  
         }
 
-        // Recursively print all subfolders with additional indentation
+        // Recursively print all subfolders
         for (Folder subFolder : subFolders) {
-            subFolder.print(indent + "  ");  // Increase indentation for subfolders
+            subFolder.print(indent + "  "); 
         }
     }
 
