@@ -34,16 +34,16 @@ public class Main {
         phpDemo.addSubFolder(new Folder("Include Path"));
         phpDemo.addSubFolder(new Folder("Remote Files"));
 
-        // Print the entire structure with indentation
+        // Print the entire structure
         System.out.println("Initial Folder Structure:");
-        phpDemo.print("");  // Call print with no initial indentation
+        phpDemo.print("");  
 
-        // Delete the "app" folder and print the structure with indentation
+        // Delete the "app" folder and print the structure
         System.out.println("\nAfter deleting the 'app' folder:");
         sourceFiles.deleteSubFolder("app");
         phpDemo.print("");
 
-        // Delete the "public" folder and print the structure with indentation
+        // Delete the "public" folder and print the structure
         System.out.println("\nAfter deleting the 'public' folder:");
         sourceFiles.deleteSubFolder("public");
         phpDemo.print("");
