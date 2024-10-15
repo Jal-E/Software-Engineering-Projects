@@ -1,0 +1,35 @@
+@startuml
+
+class File
+{
+  - fileName: String
+
+  + File()
+  + getName(): String
+  + setName(fileName: String): void
+  + toString(): String
+  + print(indent: String): void
+}
+
+class Folder
+{
+  - folderName: String
+  - subfolders: ArrayList<Folder>
+  - files: ArrayList<File>
+
+  + Folder()
+  + getName(): String
+  + setName(folderName: String): void
+  + removeSubfolder(subFolderName: String): void
+  + addSubfolder(subFolder: Folder): void
+  + getSubfolder(subFolderName: String): Folder
+  + removeFile(file: File): boolean
+  + addFile(file: File): void
+  + toString(): String
+  + print(indent: String): void
+}
+
+Folder "1" *-- "*" Folder : contains subfolders
+Folder "1" *-- "*" File : has
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+
+object "course1: Course" as course1 {
+  courseName = "Software Engineering"
+}
+
+object "instructor1: Instructor" as instructor1 {
+  firstName = "Nima"
+  lastName = "Davarpanah"
+  officeNumber = "3-2636"
+}
+
+object "textbook1: Textbook" as textbook1 {
+  title = "Clean Code"
+  author = "Robert C. Martin"
+  publisher = "Prentice Hall"
+}
+
+course1 o-- instructor1: teaches
+course1 o-- textbook1: uses
+
+@enduml
