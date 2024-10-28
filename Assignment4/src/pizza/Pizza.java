@@ -8,14 +8,12 @@ public class Pizza {
     private List<String> toppings;
     private String chainName;
 
-    // Public constructor for subclasses to use directly
     public Pizza(String size, List<String> toppings, String chainName) {
         this.size = size;
         this.toppings = toppings;
         this.chainName = chainName;
     }
 
-    // Private constructor used by the PizzaBuilder
     private Pizza(PizzaBuilder builder) {
         this.size = builder.size;
         this.toppings = builder.toppings;
@@ -57,7 +55,6 @@ public class Pizza {
         }
     }
 
-    // Getters for unit testing (optional)
     public String getSize() {
         return size;
     }
