@@ -32,7 +32,7 @@ public class PizzaDriver {
         Pizza anotherPizzaHutSmall = new PizzaHut("Small", getRandomToppings(2));
         anotherPizzaHutSmall.eat();
 
-        // Little Caesars specific pizzas
+        // Little Caesars pizzas
         System.out.println("\nLittle Caesars Pizzas:");
         Pizza littleCaesarsMedium = new LittleCaesars("Medium", getRandomToppings(8));
         littleCaesarsMedium.eat();
@@ -40,7 +40,7 @@ public class PizzaDriver {
         Pizza littleCaesarsSmall = new LittleCaesars("Small", getRandomToppings(6));
         littleCaesarsSmall.eat();
 
-        // Dominos specific pizzas
+        // Dominos pizzas
         System.out.println("\nDominos Pizzas:");
         Pizza dominosLarge = new Dominos("Large", getRandomToppings(3));
         dominosLarge.eat();
@@ -49,7 +49,6 @@ public class PizzaDriver {
         dominosSmall.eat();
     }
 
-    // Helper method to get random toppings
     private static List<String> getRandomToppings(int count) {
         List<String> toppings = new ArrayList<>(AVAILABLE_TOPPINGS);
         Collections.shuffle(toppings);
