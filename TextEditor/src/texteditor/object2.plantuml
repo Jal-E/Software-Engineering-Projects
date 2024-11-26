@@ -1,0 +1,35 @@
+@startuml
+title Object Diagram: After Modifying Character Properties of H and W
+
+object "Document" as doc {
+    characters = [H, e, l, l, o, W, o, r, l, d, C, S, 5, 8, 0, 0]
+}
+
+object "Character H" as charH {
+    symbol = 'H'
+    style = ModifiedStyle1
+}
+
+object "ModifiedStyle1" as modStyle1 {
+    font = "Arial"
+    color = "Blue"
+    size = 14
+}
+
+object "Character W" as charW {
+    symbol = 'W'
+    style = ModifiedStyle3
+}
+
+object "ModifiedStyle3" as modStyle3 {
+    font = "Verdana"
+    color = "Red"
+    size = 14
+}
+
+doc *-- charH
+charH *-- modStyle1
+doc *-- charW
+charW *-- modStyle3
+
+@enduml

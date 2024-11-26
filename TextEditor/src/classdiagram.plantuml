@@ -1,0 +1,49 @@
+@startuml
+title TextEditor UML Class Diagram
+
+class Character {
+    - char symbol
+    - CharacterStyle style
+    + getSymbol(): char
+    + getStyle(): CharacterStyle
+    + toString(): String
+}
+
+class CharacterStyle {
+    - String font
+    - String color
+    - int size
+    + getFont(): String
+    + getColor(): String
+    + getSize(): int
+    + toString(): String
+}
+
+class CharacterStyleFactory {
+    + getCharacterStyle(String font, String color, int size): CharacterStyle
+}
+
+class Document {
+    - List<Character> characters
+    + addCharacter(char symbol, String font, String color, int size): void
+    + displayDocument(): void
+    + getCharacters(): List<Character>
+}
+
+class FileHandler {
+    + saveDocument(Document document, String filename): void
+    + loadDocument(String filename): Document
+}
+
+class TextEditorApp {
+    + main(String[] args): void
+}
+
+Character "1" *-- "1" CharacterStyle : uses
+Document "1" *-- "*" Character : contains
+FileHandler "1" *-- "1" Document : processes
+TextEditorApp "1" o-- "1" Document : creates
+TextEditorApp "1" o-- "1" FileHandler : utilizes
+CharacterStyleFactory "1" o-- "*" CharacterStyle : manages
+
+@enduml

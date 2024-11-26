@@ -1,0 +1,35 @@
+@startuml
+title Object Diagram: After HelloWorldCS5800 is Entered
+
+object "Document" as doc {
+    characters = [H, e, l, l, o, W, o, r, l, d, C, S, 5, 8, 0, 0]
+}
+
+object "Character H" as charH {
+    symbol = 'H'
+    style = CharacterStyle1
+}
+
+object "CharacterStyle1" as style1 {
+    font = "Arial"
+    color = "Red"
+    size = 12
+}
+
+object "Character W" as charW {
+    symbol = 'W'
+    style = CharacterStyle3
+}
+
+object "CharacterStyle3" as style3 {
+    font = "Verdana"
+    color = "Black"
+    size = 16
+}
+
+doc *-- charH
+charH *-- style1
+doc *-- charW
+charW *-- style3
+
+@enduml
